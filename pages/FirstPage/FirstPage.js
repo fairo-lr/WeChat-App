@@ -7,7 +7,8 @@ Page({
     text: "this is content",
     text2: "this is content2",
     btntext: "确认",
-    show:true
+    show:true,
+    news:['aaa','bbb','ccc']
 
   },
 
@@ -69,5 +70,9 @@ Page({
   btnClick: function() {
     console.log("click this button")
     this.setData({text:"i am clicked"})
+
+    var datalist=this.data.news;
+    datalist.shift();
+    this.setData({text:"this is a new content...",show:!this.data.show,news:datalist})
   }
 })

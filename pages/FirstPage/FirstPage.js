@@ -7,7 +7,12 @@ Page({
     text: "this is content",
     text2: "this is content2",
     btntext: "确认",
+<<<<<<< HEAD
     show: true
+=======
+    show:true,
+    news:['aaa','bbb','ccc']
+>>>>>>> 95ec388b83fb26f30c77fa3dec996a650376d282
 
   },
 
@@ -68,11 +73,19 @@ Page({
   },
   btnClick: function() {
     console.log("click this button")
+<<<<<<< HEAD
     var isShow = this.data.show;
     console.log(isShow);
 
     this.setData({
       text: "i am clicked"
     })
+=======
+    this.setData({text:"i am clicked"})
+
+    var datalist=this.data.news;
+    datalist.shift();
+    this.setData({text:"this is a new content...",show:!this.data.show,news:datalist})
+>>>>>>> 95ec388b83fb26f30c77fa3dec996a650376d282
   }
 })

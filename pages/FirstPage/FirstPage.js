@@ -7,7 +7,7 @@ Page({
     text: "this is content",
     text2: "this is content2",
     btntext: "确认",
-    show:true
+    show: true
 
   },
 
@@ -68,6 +68,11 @@ Page({
   },
   btnClick: function() {
     console.log("click this button")
-    this.setData({text:"i am clicked"})
+    var isShow = this.data.show;
+    console.log(isShow);
+
+    this.setData({
+      text: "i am clicked"
+    })
   }
 })
